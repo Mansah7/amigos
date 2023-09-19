@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Glancyr';
 
-    src: url(/fonts/OpenType-PS/Glancyr-Bold.otf);
-    src: url(/fonts/OpenType-PS/Glancyr-SemiBold.otf);
-    src: url(/fonts/OpenType-PS/Glancyr-Medium.otf);
-    src: url(/fonts/OpenType-PS/Glancyr-Regular.otf);
+    src: url(../fonts/OpenType-PS/Glancyr-Bold.otf);
+    src: url(../fonts/OpenType-PS/Glancyr-SemiBold.otf);
+    src: url(../fonts/OpenType-PS/Glancyr-Medium.otf);
+    src: url(../fonts/OpenType-PS/Glancyr-Regular.otf);
   
     font-weight : bold;
     font-weight : normal;
@@ -1168,11 +1168,11 @@ height: auto;
   }
 
   .background-img {
-    background: url('/images/after.jpg') no-repeat center/cover;
+    background: url('../images/after.jpg') no-repeat center/cover;
     
   }
   .foreground-img {
-    background: url('/images/before.jpg') no-repeat center/cover;
+    background: url('../images/before.jpg') no-repeat center/cover;
     width: 50%;
   }
 
