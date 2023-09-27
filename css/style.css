@@ -568,6 +568,59 @@ width: 100%;
   overflow: hidden;
 }
 
+/* Add your CSS to style the map and pop-up cards */
+#map {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.leaflet-popup-content-wrapper,
+ .leaflet-popup-tip{
+  background-color: #028E9D !important;
+  border-radius: .3rem !important;
+  box-shadow:
+  2.8px 2.8px 2.2px rgba(0, 0, 0, -0.003),
+  6.7px 6.7px 5.3px rgba(0, 0, 0, -0.004),
+  12.5px 12.5px 10px rgba(0, 0, 0, -0.003),
+  22.3px 22.3px 17.9px rgba(0, 0, 0, 0.002),
+  41.8px 41.8px 33.4px rgba(0, 0, 0, 0.014),
+  100px 100px 80px rgba(0, 0, 0, 0.07)
+ !important;
+ }
+
+.leaflet-popup-content {
+  width: 200px;
+  font-family: 'Glancyr', sans-serif !important;
+  font-weight: 100 !important;
+  color: #DFEFF1 !important;
+  
+}
+
+.leaflet-container {
+  background: transparent !important;
+  outline: 0;
+}
+.marker-icon {
+  background-color: #028E9D;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  cursor: pointer;
+}
+
+.custom-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaflet-bar a, .leaflet-bar a:hover{
+  background-color: #012428 !important;
+  color: #DFEFF1 !important;
+  border: none !important;
+}
 
 
 .cta-section{
@@ -901,7 +954,7 @@ footer a *:hover{
 
 
 
-#map {
+/* #map {
 width: 100%;
 height: 100%;
 
@@ -915,7 +968,7 @@ max-width: 200px;
 .popup img {
 max-width: 100%;
 height: auto;
-}
+} */
 
 
 /* About page */
@@ -1386,6 +1439,8 @@ height: auto;
 
 
 
+
+
 /* Media screen Tablette  */
 /* Hme page */
 
@@ -1541,7 +1596,7 @@ height: auto;
   nav .linkedin{
     position: absolute;
     left: 50%;
-    bottom: -50vh;
+    bottom: -60vh;
     transform: translateX(-50%);
     font-size: clamp(1rem, 5vw, 4rem);
   }
@@ -1661,6 +1716,7 @@ height: auto;
   }
   .hero-heading h1 {
     font-size: clamp(1rem, 6vw, 2rem) !important;
+    font-weight: 300;
 }
 
 .hero-heading h1 > div.mask {
@@ -1679,6 +1735,7 @@ height: auto;
 
 .mask_btn .btn{
   transform: translateY(120%);
+  padding: .9rem 2rem 1rem 2rem;
 }
 
 .hero-section .image-box {
@@ -1708,22 +1765,41 @@ height: auto;
   width: 100%;
 }
 
+.project-section a span svg{
+  margin-top: 0;
+  margin-bottom: -.3rem;
+}
+
 .partner .card {
   width: 60vw;
 }
 
 .partner .card .partner-logo-box {
   width: 100%;
-  height: 100px;
+  height: 120px;
+}
+
+.partner .card svg{
+  margin-bottom: -.2rem;
+}
+
+.partner .card p {
+  font-size: clamp(.7rem, 3.5vw, 1.5rem);
+}
+
+
+.pilot-sites-section {
+  padding-inline: 0%;
 }
 
 .cta-container {
   width: 80vw;
-  padding: 0;
+  padding: 4rem 0;
 }
 
 .cta-section {
-  min-height: 37vh;
+  min-height: 50vh;
+  margin-top: 20vw;
 
 }
 
@@ -1731,15 +1807,27 @@ height: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  
 }
+
+
 
 .cta-section #submit {
-  width: 90%;
+  width: 95%;
+  margin-top: .7rem;
+  padding: .7rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 1rem;
 }
 
+
 .input-container input:first-of-type{
-  width: 75%;
+  width: 80%;
+  padding-top: 1rem ;
+  padding-bottom: 1rem ;
 }
 
 .contact{
@@ -1782,7 +1870,7 @@ height: auto;
 footer .cols{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2vw;
+  gap: 2rem;
 }
 
 footer .cols .col_1 p {
@@ -1791,7 +1879,7 @@ footer .cols .col_1 p {
 }
 
 footer .cols .col_2 {
-  margin-top: -1rem;
+  margin-top: -2rem;
 }
 
 footer h4 {
@@ -1807,7 +1895,8 @@ footer .cols .col_3 a {
 }
 
 footer .linkedin svg {
-  width: 2vw;
+  width: 3vw;
+  margin-bottom: -.3rem;
 }
 
 .project-disclaimer {
@@ -1818,13 +1907,13 @@ footer .linkedin svg {
 }
 
 .project-disclaimer p {
-  max-width: 91%;
-  font-size: clamp(.7rem, 1.4vw, 2rem);
+  max-width: 100%;
+  font-size: clamp(.9rem, 2vw, 2rem);
 }
 
 .final-disclaimer p {
   max-width: 90%;
-  font-size: clamp(.7rem, .8vw, 2rem);
+  font-size: clamp(.8rem, .8vw, 2rem);
 }
 
 
@@ -1866,6 +1955,20 @@ footer .linkedin svg {
   height: auto;
 }
 
+
+.partners-right p:last-of-type {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0rem;
+}
+
+.number p:last-of-type {
+  margin-top: -2rem;
+}
+
+
+
 .approach-description h5, 
 .project-methodology h5 {
   font-size: clamp(1rem, 7vw, 4rem);
@@ -1889,7 +1992,7 @@ footer .linkedin svg {
 
 .partners-description p {
   font-size: clamp(.5rem, 4vw, 3rem);
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .partners-description h4 {

@@ -547,6 +547,45 @@ nameInput.addEventListener("blur", function() {
 
 
 
+// Initialize the map
+var map = L.map('map').setView([51.505, -0.09], 13);
+
+// Add a tile layer
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Define an array of locations with their details
+var locations = [
+    {
+        coordinates: [51.5, -0.09],
+        image: 'image1.jpg',
+        link: 'https://example.com/location1',
+        popupContent: 'Location 1 - <a href="https://example.com/location1">Learn More</a>'
+    },
+    {
+        coordinates: [51.52, -0.1],
+        image: 'image2.jpg',
+        link: 'https://example.com/location2',
+        popupContent: 'Location 2 - <a href="https://example.com/location2">Learn More</a>'
+    },
+    // Add more locations as needed
+];
+
+// Loop through the locations and add markers with popups
+locations.forEach(function(location) {
+    var marker = L.marker(location.coordinates).addTo(map);
+
+    // Customize the popup content with an image and link
+    var popupContent = `
+        <h2>${location.popupContent}</h2>
+        <img src="${location.image}" alt="Location Image" width="150">
+        <p>Description or additional information about the location.</p>
+    `;
+
+    marker.bindPopup(popupContent);
+});
+
 
 
 
