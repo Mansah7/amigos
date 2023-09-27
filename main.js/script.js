@@ -326,9 +326,52 @@ function otherAnimations() {
           // markers: true,
         },
       });
+
+
+    const linesBox = document.querySelector('.lines-box');
+    const line1 = document.querySelector('.line-1');
+    const line2 = document.querySelector('.line-2');
+    const mobMenu = document.querySelector('.mobile-menu');
+    const menuLinks = document.querySelectorAll('.mobile-menu li');
+    const linkedIn = document.querySelector('nav .linkedin');
+
+
+    linesBox.addEventListener('click', function () {
+      
+      line1.classList.toggle('rotate-left');
+      line2.classList.toggle('rotate-right');
+      mobMenu.classList.toggle('active');
+      linkedIn.classList.toggle('linkedin-non-active');
+
+    })
+    
+    menuLinks.forEach(element => {
+      element.addEventListener('click', () => {
+        line1.classList.toggle('rotate-left');
+        line2.classList.toggle('rotate-right');
+        mobMenu.classList.toggle('active');
+        linkedIn.classList.toggle('linkedin-non-active');
+      });
+    });
   
 };
 
+
+function slider() {
+  $("#slider").on("input change", (e)=>{
+    const sliderPos = e.target.value;
+    // Update the width of the foreground image
+    $('.foreground-img').css('width', `${sliderPos}%`)
+  });
+  
+  $("#slider").on("input change", (e)=>{
+    const sliderPos = e.target.value;
+    // Update the width of the foreground image
+    $('.foreground-img').css('width', `${sliderPos}%`)
+    // Update the position of the slider button
+    $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`)
+  });
+}
 
 
 function countUpTo9_1() {
@@ -380,6 +423,7 @@ function reinitAnimations() {
   otherAnimations();
   countUpTo9_1();
   countUpTo20();
+  slider();
 }
 
 
@@ -412,7 +456,7 @@ barba.init({
       async leave() {
         const done = this.async();
         // Animate the bandesContainer's height to 100vh
-        TlAnime.to(bandesContainer, { height: '100vh', duration: 0.5 });
+        TlAnime.to(bandesContainer, { height: '300vh', duration: .5 });
         TlAnime.to(allBandes, { height: '100%', stagger: 0.05 });
         await delay(1500);
         done();
@@ -429,22 +473,6 @@ barba.init({
 
 
 // Before and After
-
-
-$("#slider").on("input change", (e)=>{
-  const sliderPos = e.target.value;
-  // Update the width of the foreground image
-  $('.foreground-img').css('width', `${sliderPos}%`)
-});
-
-$("#slider").on("input change", (e)=>{
-  const sliderPos = e.target.value;
-  // Update the width of the foreground image
-  $('.foreground-img').css('width', `${sliderPos}%`)
-  // Update the position of the slider button
-  $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`)
-});
-
 
 
 function validateInput(input) {
@@ -515,6 +543,10 @@ var nameInput = document.getElementById("name");
 nameInput.addEventListener("blur", function() {
   validateName(this);
 });
+
+
+
+
 
 
 
