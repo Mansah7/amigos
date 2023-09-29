@@ -108,7 +108,7 @@ font-size: clamp(1rem, 1.2vw, 2rem);
 }
 
 .mask_btn{
-height: 3.4rem;
+/* height: 3.4rem; */
 overflow: hidden;
 display: flex;
 align-items: center;
@@ -362,7 +362,7 @@ width: 100%;
 }
 
 .text{
-  transform: translateY(70%);
+  transform: translateY(100%);
   overflow: hidden;
 }
 
@@ -443,11 +443,6 @@ width: 100%;
     background-color: #028E9D;
 }
 
-/* project-section{
-  
-  
-  
-} */
 
 .section-container{
   width: 90%;
